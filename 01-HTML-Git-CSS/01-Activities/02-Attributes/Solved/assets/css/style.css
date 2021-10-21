@@ -1,0 +1,33 @@
+.section {
+    background-color: yellow;
+}
+
+.h1 {
+    color: darkblue;
+}
+
+#email {
+    background-color: goldenrod;
+}
+
+#github {
+    background-color: lightsteelblue
+}
+
+#portfolio {
+    background-color: darkorange;
+}
+
+li {
+    color: blue;
+    font-size: 12px;
+}
+
+body {
+    background-color: red;
+}
+
+li {
+    color: gray;
+    font-size: 15px;
+}
