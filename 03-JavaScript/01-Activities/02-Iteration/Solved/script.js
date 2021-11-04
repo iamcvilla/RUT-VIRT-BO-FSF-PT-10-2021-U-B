@@ -1,12 +1,8 @@
-// Creates an array containing names of five student in the class
-var students = ['Sarah', 'Orlando', 'Heather', 'Ismael', 'Hung'];
+/*
 
-// Logs length of the array
-console.log(students.length);
+It is done when the names of five classmates are stored in a single variable named students.
+It is done when the total number of elements in the students array is logged to the console.
+It is done when, using a for loop, the greeting “Great to see you, CLASSMATE_NAME!” logs to the console for each classmate’s name in the students array.
 
-// For loop starts at 0, runs while i is less than length of student array
-// Increments by 1
-for (var i = 0; i < students.length; i++) {
-  // This statement will run each time the loop is executed
-  console.log('Great to see you, ' + students[i] + '!');
-}
+
+*/
