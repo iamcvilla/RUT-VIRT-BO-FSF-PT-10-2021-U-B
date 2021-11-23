@@ -52,7 +52,7 @@ $(function() {
     'Ruby'
   ];
   $('#skill-name').autocomplete({
-    source: skillNames
+    source: skillNames,
   });
 });
 
