@@ -12,11 +12,13 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'index.html'));
+// });
 
 app.get('/api/pets', (req, res) => res.json(petData));
+
+app.post('/api/pets', (req, res) => res.json(petData));
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);

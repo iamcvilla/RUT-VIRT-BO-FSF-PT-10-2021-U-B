@@ -20,11 +20,14 @@ app.get('/', (req, res) =>
 
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {
-  // Send a message to the client
-  res.json(`${req.method} request received to get reviews`);
-
   // Log our request to the terminal
   console.info(`${req.method} request received to get reviews`);
+  
+  fs.readFile('./db/reviews.json', 'utf8', (err, data) => {
+    const reviews = JSON.parse(data);
+    res.json(reviews);
+  });
+
 });
 
 // GET request for a single review

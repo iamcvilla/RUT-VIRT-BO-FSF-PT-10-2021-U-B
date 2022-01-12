@@ -48,3 +48,14 @@ reviewForm.addEventListener('submit', (e) => {
     .then((data) => alert(`Review added! Review ID: ${data.body.review_id}`))
     .catch((err) => console.error(err));
 });
+
+
+
+fetch('/api/reviews', {
+  method: 'GET'
+}).then((res) => res.json())
+.then((data) => {
+  console.log('data', data);
+}).catch((error) => {
+  console.error('Error in GET request:', error);
+});

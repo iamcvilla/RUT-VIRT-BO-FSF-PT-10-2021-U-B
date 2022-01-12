@@ -32,5 +32,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+        fetch('http://localhost:3001/api/cats').then(function(response) {
+          return response.data();
+        }).then(function(data) {
+          console.log('data is', data);
+        });
+    </script>
   </body>
 </html>
