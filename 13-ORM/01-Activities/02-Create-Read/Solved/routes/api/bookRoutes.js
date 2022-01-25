@@ -28,7 +28,7 @@ router.get('/paperbacks', (req, res) => {
 });
 
 // GET a single book
-router.get('/:id', (req, res) => {
+router.get('/:id/', (req, res) => {
   // Find a single book by its primary key (book_id)
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);

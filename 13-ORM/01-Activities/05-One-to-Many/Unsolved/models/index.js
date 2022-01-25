@@ -7,6 +7,11 @@ Reader.hasOne(LibraryCard, {
   onDelete: 'CASCADE'
 });
 
+Reader.hasMany(Book, {
+  foreignKey: 'reader_id',
+  onDelete: 'CASCADE',
+})
+
 LibraryCard.belongsTo(Reader, {
   foreignKey: 'reader_id'
 });

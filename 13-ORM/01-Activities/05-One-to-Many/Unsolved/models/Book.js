@@ -34,7 +34,14 @@ Book.init(
     is_paperback: {
       type: DataTypes.BOOLEAN,
       defaultValue: true
-    }
+    },
+    reader_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'reader',
+        key: 'id'
+      }
+    }    
   },
   {
     sequelize,

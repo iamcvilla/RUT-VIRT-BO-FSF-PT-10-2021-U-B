@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     const libraryCardData = await LibraryCard.findAll({
       include: [{ model: Reader }],
     });
+    console.log('tes'); 
     res.status(200).json(libraryCardData);
   } catch (err) {
     res.status(500).json(err);
