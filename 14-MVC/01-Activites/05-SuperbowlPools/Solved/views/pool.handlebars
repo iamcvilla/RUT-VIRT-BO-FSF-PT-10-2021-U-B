@@ -1,0 +1,27 @@
+<h1>{{pool.dataValues.title}}</h1>
+
+<h2>Pick your spots {{username}}</h2>
+{{#each pool.dataValues.boxes as |box|}}
+    {{#if box.dataValues.user}}
+        <button class="box box-claimed" data-id="{{box.dataValues.id}}">id: {{box.dataValues.id}} {{box.dataValues.row}}-{{box.dataValues.col}}: {{box.dataValues.user}}</button>
+    {{else}}
+        <button class="box box-unclaimed" data-id="{{box.dataValues.id}}">id: {{box.dataValues.id}} {{box.dataValues.row}}-{{box.dataValues.col}}</button>
+    {{/if}}
+
+{{/each}}
+
+<script type="text/javascript">
+    $('.box-unclaimed').on('click', function() {
+        console.log('box clicked!');
+        var boxId = this.getAttribute('data-id');
+        fetch('/save-box', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                boxId: boxId,
+            })
+        });
+    })
+</script>
